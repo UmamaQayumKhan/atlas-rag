@@ -1,0 +1,801 @@
+{
+  "overall": {
+    "n": 41,
+    "n_answerable": 36,
+    "n_unanswerable": 5,
+    "recall@1": 0.8889,
+    "recall@3": 1.0,
+    "recall@5": 1.0,
+    "precision@5": 0.5278,
+    "mrr": 0.9398,
+    "ndcg@5": 0.9446,
+    "answer_in_context": 1.0
+  },
+  "by_category": {
+    "factual": {
+      "n": 19,
+      "recall@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    "lexical": {
+      "n": 3,
+      "recall@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    "multi-doc": {
+      "n": 3,
+      "recall@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    "reasoning": {
+      "n": 2,
+      "recall@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    "trap": {
+      "n": 9,
+      "recall@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    "unanswerable": {
+      "n": 5,
+      "recall@5": 1.0,
+      "answer_in_context": 0.0
+    }
+  },
+  "failures": [],
+  "meta": {
+    "mode": "retrieval",
+    "judge": false,
+    "items": 41,
+    "wall_seconds": 0.22,
+    "health": {
+      "status": "ok",
+      "indexed_chunks": 46,
+      "bm25_docs": 46,
+      "vector_backend": "memory",
+      "store_reachable": true,
+      "llm_provider": "offline",
+      "llm_model": "offline-stub",
+      "embedder": "hashing-offline",
+      "offline_mode": true,
+      "chunk_strategy": "structural",
+      "reranker": "llm"
+    },
+    "telemetry": {
+      "llm_calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_cost_usd": 0.0,
+      "embedded_texts": 46,
+      "latency_ms": {
+        "mean": 0.0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "stage_ms_p95": {
+        "ingest.embed": 40.1,
+        "ingest.total": 42.1,
+        "retrieve.dense": 4.1,
+        "retrieve.fuse": 0.1,
+        "retrieve.lexical": 0.2,
+        "retrieve.rerank": 1.3
+      },
+      "errors": []
+    }
+  },
+  "rows": [
+    {
+      "id": "bill-01",
+      "question": "How long after a failed payment is a workspace suspended?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy",
+        "api-limits",
+        "security-data-retention"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-02",
+      "question": "Can I get a refund on a monthly subscription?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "billing-policy"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-03",
+      "question": "Are overage charges refundable within the first 30 days of an annual plan?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy",
+        "support-runbook",
+        "security-data-retention",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-04",
+      "question": "What happens to my data 60 days after suspension?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy",
+        "security-data-retention"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-05",
+      "question": "How much is an extra seat on the Growth plan?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "sso-setup",
+        "billing-policy"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 0.3333333333333333,
+      "ndcg@5": 0.5,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-06",
+      "question": "If I bought an annual plan through a reseller, can Northwind refund me directly?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-07",
+      "question": "When do downgrades take effect?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy",
+        "support-runbook",
+        "sso-setup",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "bill-08",
+      "question": "What is the minimum annual contract value for purchase orders?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-01",
+      "question": "What is the SAML ACS URL?",
+      "category": "lexical",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-02",
+      "question": "Why am I getting SAML_AUDIENCE_MISMATCH?",
+      "category": "lexical",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "sso-setup"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-03",
+      "question": "Can the owner role be assigned through SSO group mapping?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup",
+        "security-data-retention",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-04",
+      "question": "Who is exempt when Enforce SSO is enabled?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup",
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-05",
+      "question": "Which tier do I need for SCIM provisioning?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup",
+        "billing-policy",
+        "security-data-retention"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-06",
+      "question": "Does SSO_REDIRECT_URI apply to the managed service?",
+      "category": "lexical",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup",
+        "security-data-retention"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-07",
+      "question": "How much clock skew does SAML authentication tolerate?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sso-08",
+      "question": "When is a seat released after SCIM deprovisioning?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "sso-setup",
+        "support-runbook",
+        "security-data-retention",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-01",
+      "question": "How many writes per minute can a Growth workspace sustain?",
+      "category": "reasoning",
+      "answerable": true,
+      "retrieved_docs": [
+        "api-limits",
+        "billing-policy",
+        "security-data-retention",
+        "sso-setup"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-02",
+      "question": "What HTTP status does a suspended workspace return on API writes?",
+      "category": "multi-doc",
+      "answerable": true,
+      "retrieved_docs": [
+        "billing-policy",
+        "api-limits",
+        "security-data-retention",
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-03",
+      "question": "How long are idempotency keys retained?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "api-limits",
+        "security-data-retention",
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-04",
+      "question": "What happens if I reuse an idempotency key with a different body?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "api-limits",
+        "sso-setup"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-05",
+      "question": "Is offset pagination supported in API v2?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-06",
+      "question": "What is the webhook retry schedule?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-07",
+      "question": "After how many days of failures is a webhook endpoint auto-disabled?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "api-limits",
+        "billing-policy",
+        "security-data-retention"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 0.5,
+      "ndcg@5": 0.6309297535714575,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "api-08",
+      "question": "How long before a pagination cursor expires?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "api-limits",
+        "support-runbook",
+        "security-data-retention"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-01",
+      "question": "Is Northwind HIPAA eligible?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "api-limits",
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-02",
+      "question": "How long are audit logs kept on the Growth plan?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "support-runbook",
+        "sso-setup",
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-03",
+      "question": "Can I enable customer-managed encryption keys on an existing workspace?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "sso-setup",
+        "billing-policy",
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-04",
+      "question": "How long does full erasure take after a deletion request?",
+      "category": "reasoning",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-05",
+      "question": "Which regions can a workspace be hosted in?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "sso-setup",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-06",
+      "question": "Within how long are customers notified of a confirmed breach?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "billing-policy",
+        "api-limits",
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.25,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sec-07",
+      "question": "Does Northwind pay a bug bounty?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "security-data-retention",
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sup-01",
+      "question": "What credit can a support agent issue without approval?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sup-02",
+      "question": "When must support escalate to engineering on-call?",
+      "category": "factual",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sup-03",
+      "question": "A customer on Growth reports their API stopped working overnight. What should support check first?",
+      "category": "multi-doc",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.5,
+      "mrr": 1.0,
+      "ndcg@5": 0.6131471927654584,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sup-04",
+      "question": "Can an agent use the $200 discretion to refund an overage charge?",
+      "category": "multi-doc",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 1.0,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "sup-05",
+      "question": "What is the first response target for a Growth P1 ticket?",
+      "category": "trap",
+      "answerable": true,
+      "retrieved_docs": [
+        "support-runbook",
+        "security-data-retention",
+        "sso-setup"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg@5": 1.0,
+      "answer_in_context": 1.0
+    },
+    {
+      "id": "neg-01",
+      "question": "What is Northwind's policy on cryptocurrency payments?",
+      "category": "unanswerable",
+      "answerable": false,
+      "retrieved_docs": [
+        "billing-policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0
+    },
+    {
+      "id": "neg-02",
+      "question": "Who is the CEO of Northwind Cloud?",
+      "category": "unanswerable",
+      "answerable": false,
+      "retrieved_docs": [
+        "billing-policy",
+        "sso-setup"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0
+    },
+    {
+      "id": "neg-03",
+      "question": "How do I configure Kerberos authentication?",
+      "category": "unanswerable",
+      "answerable": false,
+      "retrieved_docs": [
+        "security-data-retention",
+        "support-runbook"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0
+    },
+    {
+      "id": "neg-04",
+      "question": "What is the mobile app's offline sync behaviour?",
+      "category": "unanswerable",
+      "answerable": false,
+      "retrieved_docs": [
+        "support-runbook",
+        "api-limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0
+    },
+    {
+      "id": "neg-05",
+      "question": "Does Northwind offer a free trial and how long is it?",
+      "category": "unanswerable",
+      "answerable": false,
+      "retrieved_docs": [
+        "billing-policy",
+        "api-limits",
+        "security-data-retention"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "precision@5": 0.0,
+      "mrr": 0.0,
+      "ndcg@5": 0.0
+    }
+  ]
+}
